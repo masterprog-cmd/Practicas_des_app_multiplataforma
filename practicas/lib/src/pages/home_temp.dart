@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:practicas/src/componentes/home_alerts.dart';
-import 'package:practicas/src/componentes/home_avatar.dart';
 
 class HomeTemp extends StatelessWidget {
   const HomeTemp({Key? key}) : super(key: key);
@@ -8,6 +7,7 @@ class HomeTemp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         ListTile(
           leading: const Icon(
@@ -15,7 +15,10 @@ class HomeTemp extends StatelessWidget {
             color: Colors.blue,
           ),
           title: const Text("Alertas"),
-          onTap: () => HomeAlerts(),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => HomeAlerts()),
+          ),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
             children: const [
@@ -32,7 +35,6 @@ class HomeTemp extends StatelessWidget {
             color: Colors.blue,
           ),
           title: const Text("Avatar"),
-          onTap: () => HomeAvatar(),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
             children: const [
