@@ -25,7 +25,7 @@ class HomeTemp extends StatelessWidget {
               Icon(
                 Icons.navigate_next_outlined,
                 color: Colors.blue,
-              ),
+              )
             ],
           ),
         ),
