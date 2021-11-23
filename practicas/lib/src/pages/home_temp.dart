@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practicas/src/componentes/home_alerts.dart';
+import 'package:practicas/src/providers/home_alerts.dart';
 
 class HomeTemp extends StatelessWidget {
   const HomeTemp({Key? key}) : super(key: key);
@@ -46,7 +46,10 @@ class HomeTemp extends StatelessWidget {
           ),
         ),
         ListTile(
-          leading: const Icon(Icons.folder_outlined, color: Colors.blue),
+          leading: const Icon(
+            Icons.folder_outlined,
+            color: Colors.blue,
+          ),
           title: const Text("Cards-Tarjetas"),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
