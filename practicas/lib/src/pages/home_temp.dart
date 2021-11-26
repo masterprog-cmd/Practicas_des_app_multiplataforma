@@ -78,7 +78,10 @@ class HomeTemp extends StatelessWidget {
           ),
         ),
         ListTile(
-          leading: const Icon(Icons.input_outlined, color: Colors.blue),
+          leading: const Icon(
+            Icons.input_outlined,
+            color: Colors.blue,
+          ),
           title: const Text("Inputs"),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
