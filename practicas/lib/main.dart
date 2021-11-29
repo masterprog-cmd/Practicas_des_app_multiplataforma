@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Componentes'),
         ),
-        body: const HomeTemp(),
+        body: HomeTemp(),
       ),
     );
   }
