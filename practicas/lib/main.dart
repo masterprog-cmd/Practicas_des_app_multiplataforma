@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practicas/src/pages/home_temp.dart';
+import 'package:practicas/src/pages/home_temp1.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Componentes'),
         ),
-        body: HomeTemp(),
+        // body: HomeTemp(),
+        body: HomeTemp1(),
       ),
     );
   }
