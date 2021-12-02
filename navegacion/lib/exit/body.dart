@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
           FloatingActionButton(
             onPressed: () => exit(0),
             child: const Icon(Icons.close),
-          )
+          ),
         ],
       ),
     );

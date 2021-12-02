@@ -11,6 +11,7 @@ class SecondScreen extends StatelessWidget {
         centerTitle: true,
         title: const Text("Navegacion entre pantallas"),
         backgroundColor: Colors.blue,
+        automaticallyImplyLeading: false,
       ),
       body: const Center(
         child: Body(),
