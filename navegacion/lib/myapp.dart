@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:navegacion/account/account.dart';
+import 'package:navegacion/alarm/alarm.dart';
+import 'package:navegacion/color_lens/colorlens.dart';
+import 'package:navegacion/exit/exit.dart';
 import 'package:navegacion/second_screen/second_screen.dart';
 
 import 'first_screen/first_screen.dart';
@@ -19,6 +23,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const FirstScreen(),
         '/second': (context) => const SecondScreen(),
+        '/account': (context) => const AccountHome(),
+        '/exit': (context) => const ExitHome(),
+        '/colorlens': (context) => const ColorlensHome(),
+        '/alarm': (context) => const AlarmHome(),
       },
     );
   }

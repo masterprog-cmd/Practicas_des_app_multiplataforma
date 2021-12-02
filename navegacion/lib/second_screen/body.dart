@@ -22,25 +22,27 @@ class Body extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         FloatingActionButton(
-          child: Icon(Icons.color_lens),
+          child: const Icon(Icons.color_lens),
           backgroundColor: Colors.orange,
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, '/colorlens'),
         ),
         Padding(padding: space),
         FloatingActionButton(
-          child: Icon(Icons.access_alarm),
+          child: const Icon(Icons.access_alarm),
           backgroundColor: Colors.amber,
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, '/alarm'),
         ),
         Padding(padding: space),
         FloatingActionButton(
-          onPressed: () {},
+          child: const Icon(Icons.account_circle),
+          backgroundColor: Colors.green,
+          onPressed: () => Navigator.pushNamed(context, '/account'),
         ),
         Padding(padding: space),
         FloatingActionButton(
-          child: Icon(Icons.exit_to_app_outlined),
+          child: const Icon(Icons.exit_to_app_outlined),
           backgroundColor: Colors.red.shade900,
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, '/exit'),
         ),
       ],
     );
