@@ -61,6 +61,7 @@ flutter:
     
   assets:
     - data/menu_opts.json
+    - assets/
 
   #   - images/a_dot_ham.jpeg
 

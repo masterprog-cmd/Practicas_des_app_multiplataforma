@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practicas/src/pages/card_page.dart';
 import 'package:practicas/src/pages/home_temp1.dart';
 
 void main() => runApp(const MyApp());
@@ -11,13 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Componentes'),
-        ),
-        // body: HomeTemp(),
-        body: HomeTemp1(),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeTemp1(),
+        '/card': (context) => CardPage(),
+        // '/alert': (context) => ContextPage(),
+      },
     );
   }
 }
