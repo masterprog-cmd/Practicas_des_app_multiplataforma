@@ -64,7 +64,7 @@ class _CardPageState extends State<CardPage> {
           ),
           Container(
             padding: const EdgeInsets.all(10.0),
-            child: const Text('Este es un texto de prueba'),
+            child: const Text('Welcome home!'),
           ),
         ],
       ),

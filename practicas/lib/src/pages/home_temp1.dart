@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:practicas/src/pages/card_page.dart';
 
 class HomeTemp1 extends StatefulWidget {
   HomeTemp1({Key? key}) : super(key: key);
@@ -32,9 +31,10 @@ class _HomeTempState extends State<HomeTemp1> {
                 Icon(
                   Icons.navigate_next_outlined,
                   color: Colors.blue,
-                )
+                ),
               ],
             ),
+            onTap: () => Navigator.pushNamed(context, '/alert'),
           ),
           ListTile(
             leading: const Icon(
@@ -129,7 +129,7 @@ class _HomeTempState extends State<HomeTemp1> {
                 Icon(
                   Icons.navigate_next_outlined,
                   color: Colors.blue,
-                )
+                ),
               ],
             ),
           ),

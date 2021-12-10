@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practicas/src/pages/alert_page.dart';
 import 'package:practicas/src/pages/card_page.dart';
 import 'package:practicas/src/pages/home_temp1.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeTemp1(),
         '/card': (context) => CardPage(),
-        // '/alert': (context) => ContextPage(),
+        '/alert': (context) => const AlertPage(),
       },
     );
   }
