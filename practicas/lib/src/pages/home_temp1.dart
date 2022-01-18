@@ -113,9 +113,10 @@ class _HomeTempState extends State<HomeTemp1> {
                 Icon(
                   Icons.navigate_next_outlined,
                   color: Colors.blue,
-                )
+                ),
               ],
             ),
+            onTap: () => Navigator.pushNamed(context, '/slider'),
           ),
           ListTile(
             leading: const Icon(
