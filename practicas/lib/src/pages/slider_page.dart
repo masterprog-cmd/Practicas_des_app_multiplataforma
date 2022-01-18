@@ -8,7 +8,7 @@ class SlidePage extends StatefulWidget {
 }
 
 class _SlidePageState extends State<SlidePage> {
-  double _currentSliderValue = 20;
+  double _value = 0;
   bool checkBoxValue = false;
   bool checkSwitchValue = false;
 
@@ -21,16 +21,16 @@ class _SlidePageState extends State<SlidePage> {
       body: Column(
         children: [
           Slider(
-            value: _currentSliderValue,
+            value: _value,
             activeColor: Colors.grey,
             inactiveColor: Colors.blue,
+            min: 0,
             max: 100,
-            divisions: 5,
-            label: _currentSliderValue.round().toString(),
+            label: _value.round().toString(),
             onChanged: (double value) {
               setState(
                 () {
-                  _currentSliderValue = value;
+                  _value = value;
                 },
               );
             },
@@ -56,6 +56,9 @@ class _SlidePageState extends State<SlidePage> {
                 },
               );
             },
+          ),
+          const Image(
+            image: AssetImage('assets/pocoyo.jpeg'),
           ),
         ],
       ),
