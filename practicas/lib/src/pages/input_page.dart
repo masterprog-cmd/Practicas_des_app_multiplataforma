@@ -8,8 +8,8 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  String _character = '';
-  final items = ['Volar', 'Rayos X'];
+  String _name = '', _email = '';
+  final items = ['Volar', 'Rayos X', 'Super aliento', 'Super Fuerza'];
   String selectedValue = 'Volar';
 
   @override
@@ -38,25 +38,25 @@ class _InputPageState extends State<InputPage> {
                 ),
                 hintText: 'Nombre',
                 helperText: 'Sólo es el nombre',
-                counterText: 'Letras: ${_character.length.toString()}',
+                counterText: 'Letras: ${_name.length.toString()}',
                 counterStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
               onChanged: (value) {
                 setState(() {
-                  _character = value;
+                  _name = value;
                 });
               },
             ),
           ),
           const Divider(),
-          const SizedBox(
+          SizedBox(
             width: 380,
             height: 70,
             child: TextField(
               keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 isDense: true,
                 icon: Icon(Icons.email),
                 suffixIcon: Icon(Icons.alternate_email_outlined),
@@ -65,6 +65,9 @@ class _InputPageState extends State<InputPage> {
                 ),
                 hintText: 'Email',
               ),
+              onChanged: (value) {
+                _email = value;
+              },
             ),
           ),
           const Divider(),
@@ -103,29 +106,53 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           const Divider(),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+          Row(
+            children: [
+              const Icon(Icons.select_all_rounded),
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(10)),
 
-            // dropdown below..
-            child: DropdownButton<String>(
-              value: selectedValue,
-              onChanged: (String? newValue) =>
-                  setState(() => selectedValue = newValue!),
-              items: items
-                  .map<DropdownMenuItem<String>>(
-                      (String value) => DropdownMenuItem<String>(
-                            value: value,
-                            child: Text(value),
-                          ))
-                  .toList(),
+                // dropdown below..
+                child: DropdownButton<String>(
+                  value: selectedValue,
+                  onChanged: (String? newValue) =>
+                      setState(() => selectedValue = newValue!),
+                  items: items
+                      .map<DropdownMenuItem<String>>(
+                        (String value) => DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        ),
+                      )
+                      .toList(),
 
-              // add extra sugar..
-              icon: Icon(Icons.arrow_drop_down),
-              iconSize: 42,
-              underline: SizedBox(),
-            ),
+                  // add extra sugar..
+                  icon: const Icon(Icons.arrow_drop_down),
+                  iconSize: 42,
+                ),
+              ),
+            ],
+          ),
+          const Divider(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  Text("Tu nombre es: $_name"),
+                  Text("Email: $_email"),
+                ],
+              ),
+              Text(
+                selectedValue,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ],
       ),

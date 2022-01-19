@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       debugShowCheckedModeBanner: false,
+      useInheritedMediaQuery: true,
       initialRoute: '/',
       routes: {
         '/': (context) => HomeTemp1(),
