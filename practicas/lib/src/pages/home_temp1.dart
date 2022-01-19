@@ -12,6 +12,7 @@ class _HomeTempState extends State<HomeTemp1> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Componentes'),

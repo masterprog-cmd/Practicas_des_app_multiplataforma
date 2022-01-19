@@ -9,6 +9,8 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   String _character = '';
+  final items = ['Volar', 'Rayos X'];
+  String selectedValue = 'Volar';
 
   @override
   Widget build(BuildContext context) {
@@ -98,6 +100,31 @@ class _InputPageState extends State<InputPage> {
                 ),
                 hintText: 'Fecha de nacimiento',
               ),
+            ),
+          ),
+          const Divider(),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+
+            // dropdown below..
+            child: DropdownButton<String>(
+              value: selectedValue,
+              onChanged: (String? newValue) =>
+                  setState(() => selectedValue = newValue!),
+              items: items
+                  .map<DropdownMenuItem<String>>(
+                      (String value) => DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          ))
+                  .toList(),
+
+              // add extra sugar..
+              icon: Icon(Icons.arrow_drop_down),
+              iconSize: 42,
+              underline: SizedBox(),
             ),
           ),
         ],
