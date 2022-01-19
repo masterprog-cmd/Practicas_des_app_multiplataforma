@@ -57,7 +57,9 @@ class _SlidePageState extends State<SlidePage> {
               );
             },
           ),
-          const Image(
+          Image(
+            width: _value,
+            height: _value,
             image: AssetImage('assets/pocoyo.jpeg'),
           ),
         ],
