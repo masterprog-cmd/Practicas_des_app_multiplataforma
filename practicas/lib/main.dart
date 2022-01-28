@@ -5,7 +5,9 @@ import 'package:practicas/src/pages/home_temp1.dart';
 import 'package:practicas/src/pages/input_page.dart';
 import 'package:practicas/src/pages/slider_page.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

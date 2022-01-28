@@ -66,7 +66,11 @@ class _InputPageState extends State<InputPage> {
                 hintText: 'Email',
               ),
               onChanged: (value) {
-                _email = value;
+                setState(
+                  () {
+                    _email = value;
+                  },
+                );
               },
             ),
           ),
